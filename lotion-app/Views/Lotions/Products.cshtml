@@ -1,0 +1,39 @@
+﻿@model IEnumerable<lotionApp.Models.Lotion>
+
+@{
+    ViewData["Title"] = "Soft Touch";
+
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img src="@Url.Content($"~/img/def.png")" class="card-img-top" alt="@item.Name" />
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p class="card-text">
+                        <strong>Brand:</strong> @Html.DisplayFor(modelItem => item.Brand)<br />
+                        <strong>Volume:</strong> @Html.DisplayFor(modelItem => item.Volume) ml<br />
+                        <strong>Price:</strong> @Html.DisplayFor(modelItem => item.Price)<br />
+                        <strong>Scent:</strong> @Html.DisplayFor(modelItem => item.Scent)<br />
+                        <strong>SPF:</strong> @Html.DisplayFor(modelItem => item.SPF)<br />
+                        <strong>Ingredients:</strong> @Html.DisplayFor(modelItem => item.Ingredients)
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

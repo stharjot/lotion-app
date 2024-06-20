@@ -20,11 +20,22 @@ namespace lotion_app.Controllers
         }
 
         // GET: Lotions
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public async Task<IActionResult> Products()
         {
             return View(await _context.Lotion.ToListAsync());
         }
-
+        public IActionResult Privacy()
+        {
+            return View();
+        }
         // GET: Lotions/Details/5
         public async Task<IActionResult> Details(int? id)
         {
