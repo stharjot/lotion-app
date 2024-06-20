@@ -2,7 +2,8 @@
   "dependencies": {
     "mssql1": {
       "type": "mssql",
-      "connectionId": "ConnectionStrings:lotion_appContext"
+      "connectionId": "ConnectionStrings:lotion_appContext",
+      "dynamicId": null
     }
   }
 }
