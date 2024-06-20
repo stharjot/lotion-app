@@ -41,6 +41,39 @@ No Auth
 18:45
 - Added default image for the images for the items
 
+# 2024-06-17
+
+18:30
+-Created About Us page which provides information about our Soft Touch. It includes:
+
+    Detailed description of our products.
+    Background information about our team.
+
+# 2024-06-18
+
+17:25
+-Created a background image that has been added to enhance the visual appeal of the About Us page.
+
+-Created the Products page showcases the products or services offered by our organization. It includes:
+
+    Categories of products/services.
+    Detailed descriptions and images of each product/service.
+
+# 2024-06-19
+
+19:12
+-Created the index page serves as the default landing page when accessing the website. It introduces visitors to our organization and provides navigation to other sections like About Us and Products.
+
+
+# 2024-06-20
+
+14:00
+We have Setted up the project for Deployment.
+
+
+
+
+
 
 
 
