@@ -14,6 +14,7 @@ namespace lotion_app.Data
         {
         }
 
-        public DbSet<lotionApp.Models.Lotion> Lotion { get; set; } = default!;
+        //public DbSet<lotionApp.Models.Lotion> Lotion { get; set; } = default!;
+        public DbSet<Lotion> Lotions { get; set; }
     }
 }

@@ -5,13 +5,13 @@
 namespace lotion_app.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Lotion",
+                name: "Lotions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -26,7 +26,7 @@ namespace lotion_app.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Lotion", x => x.Id);
+                    table.PrimaryKey("PK_Lotions", x => x.Id);
                 });
         }
 
@@ -34,7 +34,7 @@ namespace lotion_app.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Lotion");
+                name: "Lotions");
         }
     }
 }

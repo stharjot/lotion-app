@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using lotionApp.Models;
 using lotion_app.Data;
+using System.Diagnostics;
 
 namespace lotion_app.Controllers
 {
@@ -30,7 +31,12 @@ namespace lotion_app.Controllers
         }
         public async Task<IActionResult> Products()
         {
-            return View(await _context.Lotion.ToListAsync());
+            if (_context != null) 
+            {
+
+                Console.WriteLine("Test");
+            }
+            return View(await _context.Lotions.ToListAsync());
         }
         public IActionResult Privacy()
         {
@@ -44,7 +50,7 @@ namespace lotion_app.Controllers
                 return NotFound();
             }
 
-            var lotion = await _context.Lotion
+            var lotion = await _context.Lotions
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (lotion == null)
             {
@@ -84,7 +90,7 @@ namespace lotion_app.Controllers
                 return NotFound();
             }
 
-            var lotion = await _context.Lotion.FindAsync(id);
+            var lotion = await _context.Lotions.FindAsync(id);
             if (lotion == null)
             {
                 return NotFound();
@@ -135,7 +141,7 @@ namespace lotion_app.Controllers
                 return NotFound();
             }
 
-            var lotion = await _context.Lotion
+            var lotion = await _context.Lotions
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (lotion == null)
             {
@@ -150,10 +156,10 @@ namespace lotion_app.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var lotion = await _context.Lotion.FindAsync(id);
+            var lotion = await _context.Lotions.FindAsync(id);
             if (lotion != null)
             {
-                _context.Lotion.Remove(lotion);
+                _context.Lotions.Remove(lotion);
             }
 
             await _context.SaveChangesAsync();
@@ -162,7 +168,7 @@ namespace lotion_app.Controllers
 
         private bool LotionExists(int id)
         {
-            return _context.Lotion.Any(e => e.Id == id);
+            return _context.Lotions.Any(e => e.Id == id);
         }
     }
 }

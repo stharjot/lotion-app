@@ -14,14 +14,14 @@ public static class SeedData
                 DbContextOptions<lotion_appContext>>()))
         {
             // Look for any movies.
-            if (context.Lotion.Any())
+            if (context.Lotions.Any())
             {
                 return;   // DB has been seeded
             }
 
             var dataList = GenerateRandomLotions(10);
 
-            context.Lotion.AddRange(dataList);
+            context.Lotions.AddRange(dataList);
             context.SaveChanges();
         }
     }

@@ -11,15 +11,15 @@ using lotion_app.Data;
 namespace lotion_app.Migrations
 {
     [DbContext(typeof(lotion_appContext))]
-    [Migration("20240613161844_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240622170710_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "7.0.18")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -59,7 +59,7 @@ namespace lotion_app.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Lotion");
+                    b.ToTable("Lotions");
                 });
 #pragma warning restore 612, 618
         }

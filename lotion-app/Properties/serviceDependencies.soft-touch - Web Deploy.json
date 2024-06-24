@@ -3,7 +3,7 @@
     "mssql1": {
       "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Web/sites/soft-touch/providers/Microsoft.ServiceLinker/linkers/ConnectionStringslotion_appContext_9E55BFDDAC",
       "secretStore": "AzureAppSettings",
-      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/lotion-appdbserver/databases/lotion-app_db",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/soft-touch-dbserver/databases/soft-touch",
       "type": "mssql.azure",
       "connectionId": "ConnectionStrings:lotion_appContext",
       "dynamicId": null
